@@ -1,9 +1,37 @@
 id,area,title,priority,type,status
-TC-AUTH-001,Web Authentication,Successful Login With Valid Credentials,High,"Smoke; Functional",Not run
-TC-AUTH-002,Web Authentication,Login With Incorrect Password,High,"Negative; Functional",Not run
-TC-AUTH-003,Web Authentication,Email Validation On Login Form,Medium,"Validation; Negative",Not run
-TC-AUTH-004,Web Authentication,Password Recovery Request,Medium,Functional,Not run
-TC-AUTH-005,Web Authentication,Logout From Account,High,"Smoke; Regression",Not run
+TC-AUTH-001,Авторизация,Успешная авторизация,High,"Smoke; Functional",Not run
+TC-AUTH-002,Авторизация,Авторизация с неверным паролем,High,"Negative; Functional",Not run
+TC-AUTH-003,Авторизация,Авторизация с несуществующим логином,High,"Negative; Functional",Not run
+TC-AUTH-004,Авторизация,Пустое поле Логин,High,"Validation; Negative",Not run
+TC-AUTH-005,Авторизация,Пустое поле Пароль,High,"Validation; Negative",Not run
+TC-AUTH-006,Авторизация,Оба обязательных поля пустые,High,"Validation; Negative",Not run
+TC-AUTH-007,Авторизация,Проверка чувствительности пароля к регистру,Medium,"Negative; Functional",Not run
+TC-AUTH-008,Авторизация,Обработка пробелов в логине,Medium,"Validation; Functional",Not run
+TC-AUTH-009,Авторизация,Кнопка Показать пароль,Medium,"UI; Functional",Not run
+TC-AUTH-010,Авторизация,Авторизация по клавише Enter,Medium,"UI; Functional",Not run
+TC-AUTH-011,Авторизация,Выход из системы,High,"Smoke; Functional",Not run
+TC-AUTH-012,Авторизация,Доступ к защищенной странице после выхода,High,"Security; Regression",Not run
+TC-AUTH-013,Авторизация,Блокировка после нескольких неудачных попыток,High,"Security; Negative",Not run
+TC-AUTH-014,Безопасность авторизации,SQL Injection в поле логина,Critical,"Security; Negative",Not run
+TC-AUTH-015,Безопасность авторизации,SQL Injection в поле пароля,Critical,"Security; Negative",Not run
+TC-AUTH-016,Безопасность авторизации,XSS в поле логина,Critical,"Security; Negative",Not run
+TC-AUTH-017,Безопасность авторизации,XSS через сообщение об ошибке,Critical,"Security; Negative",Not run
+TC-AUTH-018,Безопасность авторизации,Защита от brute force,Critical,"Security; Negative",Not run
+TC-AUTH-019,Безопасность авторизации,Проверка обхода блокировки,Critical,"Security; Negative",Not run
+TC-AUTH-020,JWT,Проверка JWT после авторизации,High,"Security; API",Not run
+TC-AUTH-021,JWT,Использование просроченного JWT,High,"Security; API",Not run
+TC-AUTH-022,JWT,Подмена JWT,Critical,"Security; API",Not run
+TC-AUTH-023,Сессии,Remember Me: сохранение авторизации,Medium,"Functional; Session",Not run
+TC-AUTH-024,Сессии,Авторизация без Remember Me,Medium,"Functional; Session",Not run
+TC-AUTH-025,Сессии,Истечение сессии по таймауту,High,"Security; Session",Not run
+TC-AUTH-026,Сессии,Действие после истечения сессии,High,"Security; Session",Not run
+TC-AUTH-027,Сессии,Авторизация в нескольких вкладках,Medium,"Session; Functional",Not run
+TC-AUTH-028,Сессии,Выход из одной вкладки,High,"Security; Session",Not run
+TC-AUTH-029,Сессии,Авторизация в разных браузерах,Medium,"Session; Cross-browser",Not run
+TC-AUTH-030,2FA,Успешное прохождение 2FA,High,"Security; Functional",Not run
+TC-AUTH-031,2FA,Неверный код 2FA,High,"Security; Negative",Not run
+TC-AUTH-032,2FA,Повторное использование кода 2FA,High,"Security; Negative",Not run
+TC-AUTH-033,2FA,Истекший код 2FA,High,"Security; Negative",Not run
 TC-CHECKOUT-001,E-commerce Checkout,Add Product To Cart,High,"Smoke; Functional",Not run
 TC-CHECKOUT-002,E-commerce Checkout,Change Product Quantity In Cart,Medium,"Functional; Regression",Not run
 TC-CHECKOUT-003,E-commerce Checkout,Remove Product From Cart,High,Functional,Not run

@@ -1,44 +1,45 @@
 # Manual Test Cases
 
-Repository with examples of manual QA documentation: test cases, checklists, and bug reports.
+Репозиторий с примерами документации manual QA: тест-кейсы, чек-листы и баг-репорты.
 
-## Contents
+## Содержание
 
-- `test-cases/web-authentication.md` - web authorization and registration scenarios.
-- `test-cases/ecommerce-checkout.md` - marketplace cart and checkout scenarios.
-- `test-cases/mobile-banking-transfer.md` - mobile banking transfer scenarios.
-- `test-cases/api-profile.md` - manual API test cases for user profile endpoints.
-- `checklists/smoke-checklist.md` - smoke checklist for release verification.
-- `bug-reports/examples.md` - examples of clear bug reports.
-- `templates/test-case-template.md` - reusable test case template.
+- `test-cases/web-authentication.md` - авторизация пользователя, безопасность, сессии, JWT и 2FA.
+- `test-cases/ecommerce-checkout.md` - сценарии корзины и оформления заказа.
+- `test-cases/mobile-banking-transfer.md` - сценарии переводов в мобильном банке.
+- `test-cases/api-profile.md` - ручные API-проверки профиля пользователя.
+- `checklists/smoke-checklist.md` - smoke checklist для релизной проверки.
+- `bug-reports/examples.md` - примеры баг-репортов.
+- `templates/test-case-template.md` - переиспользуемый шаблон тест-кейса.
 
-## Test Case Format
+## Формат тест-кейса
 
-Each test case includes:
+Каждый тест-кейс содержит:
 
 - ID
-- Title
-- Priority
-- Preconditions
-- Test data
-- Steps
-- Expected result
-- Status
+- название
+- приоритет
+- тип проверки
+- предусловия
+- тестовые данные
+- шаги
+- ожидаемый результат
+- статус
 
-## Tools
+## Инструменты
 
 - Jira / YouTrack style bug reports
 - TestRail style test cases
-- Postman for API checks
-- Chrome DevTools for web checks
-- Android Studio / Xcode for mobile debugging
+- Postman для API-проверок
+- Chrome DevTools для web-проверок
+- Android Studio / Xcode для mobile debugging
 
-## Purpose
+## Цель
 
-This repository is used as a portfolio project to demonstrate manual QA documentation skills:
+Репозиторий используется как портфолио-проект для демонстрации навыков manual QA:
 
-- decomposition of product requirements;
-- positive and negative scenario coverage;
-- clear expected results;
-- priority-based test design;
-- readable QA documentation structure.
+- декомпозиция требований;
+- покрытие позитивных и негативных сценариев;
+- понятные ожидаемые результаты;
+- тест-дизайн с учетом приоритета и риска;
+- аккуратная структура QA-документации.

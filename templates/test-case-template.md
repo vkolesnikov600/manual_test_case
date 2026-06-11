@@ -1,23 +1,23 @@
-# Test Case Template
+# Шаблон тест-кейса
 
-| Field | Value |
+| Поле | Значение |
 | --- | --- |
 | ID | TC-XXX |
-| Title |  |
-| Priority | High / Medium / Low |
-| Type | Functional / Regression / Smoke / Negative / UI / API |
-| Preconditions |  |
-| Test data |  |
-| Status | Not run / Passed / Failed / Blocked |
+| Название |  |
+| Приоритет | Critical / High / Medium / Low |
+| Тип | Functional / Regression / Smoke / Negative / UI / API / Security |
+| Предусловия |  |
+| Тестовые данные |  |
+| Статус | Not run / Passed / Failed / Blocked |
 
-## Steps
+## Шаги
 
-| Step | Action | Expected result |
+| Шаг | Действие | Ожидаемый результат |
 | --- | --- | --- |
 | 1 |  |  |
 | 2 |  |  |
 | 3 |  |  |
 
-## Notes
+## Примечания
 
 -
