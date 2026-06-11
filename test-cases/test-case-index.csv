@@ -1,0 +1,20 @@
+id,area,title,priority,type,status
+TC-AUTH-001,Web Authentication,Successful Login With Valid Credentials,High,"Smoke; Functional",Not run
+TC-AUTH-002,Web Authentication,Login With Incorrect Password,High,"Negative; Functional",Not run
+TC-AUTH-003,Web Authentication,Email Validation On Login Form,Medium,"Validation; Negative",Not run
+TC-AUTH-004,Web Authentication,Password Recovery Request,Medium,Functional,Not run
+TC-AUTH-005,Web Authentication,Logout From Account,High,"Smoke; Regression",Not run
+TC-CHECKOUT-001,E-commerce Checkout,Add Product To Cart,High,"Smoke; Functional",Not run
+TC-CHECKOUT-002,E-commerce Checkout,Change Product Quantity In Cart,Medium,"Functional; Regression",Not run
+TC-CHECKOUT-003,E-commerce Checkout,Remove Product From Cart,High,Functional,Not run
+TC-CHECKOUT-004,E-commerce Checkout,Checkout With Valid Delivery Address,High,"Functional; End-to-end",Not run
+TC-CHECKOUT-005,E-commerce Checkout,Checkout With Empty Required Fields,High,"Negative; Validation",Not run
+TC-MOB-BANK-001,Mobile Banking Transfer,Transfer Between Own Accounts,High,"Smoke; Functional",Not run
+TC-MOB-BANK-002,Mobile Banking Transfer,Transfer With Amount Greater Than Balance,High,"Negative; Functional",Not run
+TC-MOB-BANK-003,Mobile Banking Transfer,Transfer Confirmation By OTP,High,"Security; Functional",Not run
+TC-MOB-BANK-004,Mobile Banking Transfer,Invalid OTP During Transfer,High,"Negative; Security",Not run
+TC-MOB-BANK-005,Mobile Banking Transfer,Transfer Form After Network Loss,Medium,"Mobile; Negative",Not run
+TC-API-PROFILE-001,API Profile,Get Current User Profile,High,"API; Smoke",Not run
+TC-API-PROFILE-002,API Profile,Get Profile Without Token,High,"API; Negative; Security",Not run
+TC-API-PROFILE-003,API Profile,Update Profile With Valid Data,High,"API; Functional",Not run
+TC-API-PROFILE-004,API Profile,Update Profile With Invalid Email Format,Medium,"API; Negative; Validation",Not run
