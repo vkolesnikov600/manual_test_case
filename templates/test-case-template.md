@@ -1,23 +1,35 @@
 # Шаблон тест-кейса
 
-| Поле | Значение |
-| --- | --- |
-| ID | TC-XXX |
-| Название |  |
-| Приоритет | Critical / High / Medium / Low |
-| Тип | Functional / Regression / Smoke / Negative / UI / API / Security |
-| Предусловия |  |
-| Тестовые данные |  |
-| Статус | Not run / Passed / Failed / Blocked |
+## TC-XXX - Название тест-кейса
 
-## Шаги
+**Приоритет:** Critical / High / Medium / Low
+**Тип:** Functional / Regression / Smoke / Negative / UI / API / Security
+**Статус:** Not run / Passed / Failed / Blocked
 
-| Шаг | Действие | Ожидаемый результат |
-| --- | --- | --- |
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
+### Предусловия
 
-## Примечания
+-
+
+### Тестовые данные
+
+-
+
+### Шаги
+
+1.
+2.
+3.
+
+### ОР
+
+1.
+2.
+3.
+
+### ФР
+
+-
+
+### Примечания
 
 -
