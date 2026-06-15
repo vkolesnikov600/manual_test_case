@@ -1,6 +1,6 @@
-# Bug Report Examples
+# Bug Report 
 
-## BUG-001 - User Can Submit Checkout Form With Empty Phone Field
+## BUG-001 - Некорректная работа нескольких фильтров одновременно.
 
 | Field | Value |
 | --- | --- |
@@ -11,33 +11,26 @@
 | Status | Open |
 
 ## Preconditions
+Находиться в каталоге. 
 
-- User is logged in.
-- Cart contains at least one product.
-- Checkout page is opened.
 
 ## Steps To Reproduce
 
-1. Open checkout page.
-2. Fill all required fields except `Phone`.
-3. Click `Place order`.
+1. Открыть каталог.
+2. Выбрать бренд Samsung.
+3. Выбрать бренд Xiaomi.
+4. Нажать "Применить".
 
 ## Actual Result
 
-Order is created successfully without phone number.
+Отображаются товары только Samsung.
 
 ## Expected Result
 
-Order is not created. Phone field is highlighted and validation message is displayed.
+Отображаются товары Samsung и Xiaomi.
 
-## Attachments
 
-- Screenshot of checkout form.
-- Network request payload.
-
----
-
-## BUG-002 - Incorrect Error Message For Invalid OTP
+## BUG-002 - Кнопка "Сбросить фильтры" не очищает диапазон цены.
 
 | Field | Value |
 | --- | --- |
@@ -49,23 +42,19 @@ Order is not created. Phone field is highlighted and validation message is displ
 
 ## Preconditions
 
-- User is logged in.
-- User is on transfer confirmation screen.
+Находиться на странице фильтров.
 
 ## Steps To Reproduce
 
-1. Enter invalid OTP `000000`.
-2. Tap `Confirm`.
-
+Шаги:
+Установить цену от 5000 до 10000.
+Нажать "Применить".
+Нажать "Сбросить фильтры".
 ## Actual Result
 
-Application shows `Something went wrong`.
+Диапазон цены остается заполненным.
 
 ## Expected Result
 
-Application shows clear message: `Invalid confirmation code`.
+Все фильтры должны быть очищены.
 
-## Attachments
-
-- Screenshot of error message.
-- Device logs.
