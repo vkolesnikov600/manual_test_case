@@ -1,63 +1,74 @@
-# API Profile Test Cases
+## TC-API-PROFILE-001 — Получение профиля текущего пользователя
 
-## TC-API-PROFILE-001 - Get Current User Profile
+| Поле            | Значение                 |
+| --------------- | ------------------------ |
+| Приоритет       | Высокий                  |
+| Тип             | API, Smoke               |
+| Предусловия     | Пользователь авторизован |
+| Тестовые данные | Валидный Bearer Token    |
+| Статус          | Не выполнен              |
 
-| Field | Value |
-| --- | --- |
-| Priority | High |
-| Type | API, Smoke |
-| Preconditions | User is authorized |
-| Test data | Valid bearer token |
-| Status | Not run |
+| Шаг | Действие                                               | Ожидаемый результат                          |
+| --- | ------------------------------------------------------ | -------------------------------------------- |
+| 1   | Отправить запрос `GET /api/profile` с валидным токеном | Статус ответа `200 OK`                       |
+| 2   | Проверить тело ответа                                  | Тело содержит поля `id`, `email`, `name`     |
+| 3   | Проверить типы данных полей                            | Типы данных соответствуют API-документации   |
+| 4   | Проверить время ответа                                 | Время ответа находится в допустимых пределах |
 
-| Step | Action | Expected result |
-| --- | --- | --- |
-| 1 | Send `GET /api/profile` with valid token | Response status is `200 OK` |
-| 2 | Check response body | Body contains `id`, `email`, `name` |
-| 3 | Validate field types | Field types match API documentation |
-| 4 | Check response time | Response time is within accepted limit |
+---
 
-## TC-API-PROFILE-002 - Get Profile Without Token
+## TC-API-PROFILE-002 — Получение профиля без токена
 
-| Field | Value |
-| --- | --- |
-| Priority | High |
-| Type | API, Negative, Security |
-| Preconditions | Endpoint is available |
-| Test data | No authorization header |
-| Status | Not run |
+| Поле            | Значение                          |
+| --------------- | --------------------------------- |
+| Приоритет       | Высокий                           |
+| Тип             | API, Негативный, Безопасность     |
+| Предусловия     | Эндпоинт доступен                 |
+| Тестовые данные | Отсутствует заголовок авторизации |
+| Статус          | Не выполнен                       |
 
-| Step | Action | Expected result |
-| --- | --- | --- |
-| 1 | Send `GET /api/profile` without token | Response status is `401 Unauthorized` |
-| 2 | Check response body | Error code/message is returned |
-| 3 | Check sensitive data | Profile data is not returned |
+| Шаг | Действие                                       | Ожидаемый результат                  |
+| --- | ---------------------------------------------- | ------------------------------------ |
+| 1   | Отправить запрос `GET /api/profile` без токена | Статус ответа `401 Unauthorized`     |
+| 2   | Проверить тело ответа                          | Возвращается код/сообщение об ошибке |
+| 3   | Проверить наличие конфиденциальных данных      | Данные профиля не возвращаются       |
 
-## TC-API-PROFILE-003 - Update Profile With Valid Data
+---
 
-| Field | Value |
-| --- | --- |
-| Priority | High |
-| Type | API, Functional |
-| Preconditions | User is authorized |
-| Test data | Name: `Vladislav`, phone: valid phone number |
-| Status | Not run |
+## TC-API-PROFILE-003 — Обновление профиля с валидными данными
 
-| Step | Action | Expected result |
-| --- | --- | --- |
-| 1 | Send `PATCH /api/profile` with valid body | Response status is `200 OK` |
-| 2 | Check response body | Updated fields are returned |
-| 3 | Send `GET /api/profile` | Updated data is saved |
+| Поле            | Значение                                           |
+| --------------- | -------------------------------------------------- |
+| Приоритет       | Высокий                                            |
+| Тип             | API, Функциональный                                |
+| Предусловия     | Пользователь авторизован                           |
+| Тестовые данные | Имя: `Vladislav`, телефон: валидный номер телефона |
+| Статус          | Не выполнен                                        |
 
-## TC-API-PROFILE-004 - Update Profile With Invalid Email Format
+| Шаг | Действие                                                         | Ожидаемый результат           |
+| --- | ---------------------------------------------------------------- | ----------------------------- |
+| 1   | Отправить запрос `PATCH /api/profile` с корректным телом запроса | Статус ответа `200 OK`        |
+| 2   | Проверить тело ответа                                            | Возвращаются обновленные поля |
+| 3   | Отправить запрос `GET /api/profile`                              | Обновленные данные сохранены  |
 
-| Field | Value |
-| --- | --- |
-| Priority | Medium |
-| Type | API, Negative, Validation |
-| Preconditions | User is authorized |
-| Test data | Email: `wrong-email-format` |
-| Status | Not run |
+---
+
+## TC-API-PROFILE-004 — Обновление профиля с некорректным форматом email
+
+| Поле            | Значение                    |
+| --------------- | --------------------------- |
+| Приоритет       | Средний                     |
+| Тип             | API, Негативный, Валидация  |
+| Предусловия     | Пользователь авторизован    |
+| Тестовые данные | Email: `wrong-email-format` |
+| Статус          | Не выполнен                 |
+
+| Шаг | Действие                                                   | Ожидаемый результат                              |
+| --- | ---------------------------------------------------------- | ------------------------------------------------ |
+| 1   | Отправить запрос `PATCH /api/profile` с некорректным email | Статус ответа `400 Bad Request`                  |
+| 2   | Проверить сообщение валидации                              | Возвращается ошибка валидации email              |
+| 3   | Отправить запрос `GET /api/profile`                        | Предыдущее значение email остается без изменений |
+
 
 | Step | Action | Expected result |
 | --- | --- | --- |
