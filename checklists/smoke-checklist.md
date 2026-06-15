@@ -1,35 +1,36 @@
-# Smoke Checklist
+# Чек-лист Smoke Testing
 
-## Web Application
+## Веб-приложение
 
-- [ ] Main page opens without server errors.
-- [ ] Header, footer, and main navigation are displayed.
-- [ ] Login page opens.
-- [ ] User can log in with valid credentials.
-- [ ] User can log out.
-- [ ] Main user dashboard opens after login.
-- [ ] Key buttons and links are clickable.
-- [ ] Forms show validation messages for empty required fields.
-- [ ] No critical errors are displayed in browser console.
-- [ ] Page is usable on desktop and mobile viewport.
+* [ ] Главная страница открывается без серверных ошибок.
+* [ ] Отображаются хедер, футер и основная навигация.
+* [ ] Открывается страница авторизации.
+* [ ] Пользователь может войти в систему с корректными учетными данными.
+* [ ] Пользователь может выйти из системы.
+* [ ] После входа открывается главная панель пользователя.
+* [ ] Основные кнопки и ссылки кликабельны.
+* [ ] Формы отображают сообщения валидации для обязательных незаполненных полей.
+* [ ] В консоли браузера отсутствуют критические ошибки.
+* [ ] Страница корректно работает в десктопной и мобильной версиях.
 
-## Mobile Application
+## Мобильное приложение
 
-- [ ] Application starts without crash.
-- [ ] Splash screen is displayed correctly.
-- [ ] Login screen opens.
-- [ ] User can log in with valid credentials.
-- [ ] Bottom navigation works.
-- [ ] Main screens are opened without endless loaders.
-- [ ] Push permission dialog does not block core flows.
-- [ ] Application handles offline mode with clear message.
-- [ ] User can log out.
+* [ ] Приложение запускается без сбоев и вылетов.
+* [ ] Сплэш-экран отображается корректно.
+* [ ] Открывается экран авторизации.
+* [ ] Пользователь может войти в систему с корректными учетными данными.
+* [ ] Нижняя навигационная панель работает корректно.
+* [ ] Основные экраны открываются без бесконечной загрузки.
+* [ ] Запрос разрешения на push-уведомления не блокирует основные пользовательские сценарии.
+* [ ] При отсутствии интернет-соединения приложение отображает понятное сообщение.
+* [ ] Пользователь может выйти из системы.
 
 ## API
 
-- [ ] Health endpoint returns successful response.
-- [ ] Authorized endpoint rejects request without token.
-- [ ] Authorized endpoint accepts request with valid token.
-- [ ] Invalid request body returns validation error.
-- [ ] Response structure matches API documentation.
-- [ ] Response time is within accepted limit.
+* [ ] Health-check эндпоинт возвращает успешный ответ.
+* [ ] Защищенный эндпоинт отклоняет запрос без токена авторизации.
+* [ ] Защищенный эндпоинт принимает запрос с валидным токеном.
+* [ ] Некорректное тело запроса возвращает ошибку валидации.
+* [ ] Структура ответа соответствует API-документации.
+* [ ] Время ответа находится в пределах допустимого значения.
+
