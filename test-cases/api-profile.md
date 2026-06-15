@@ -70,8 +70,4 @@
 | 3   | Отправить запрос `GET /api/profile`                        | Предыдущее значение email остается без изменений |
 
 
-| Step | Action | Expected result |
-| --- | --- | --- |
-| 1 | Send `PATCH /api/profile` with invalid email | Response status is `400 Bad Request` |
-| 2 | Check validation message | Email validation error is returned |
-| 3 | Send `GET /api/profile` | Previous email remains unchanged |
+
